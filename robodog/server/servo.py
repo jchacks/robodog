@@ -104,7 +104,7 @@ def test_90():
             for i in range(16):
                 S.setServoAngle(i, 90)
         except KeyboardInterrupt:
-            logger.info("\nEnd of program")
+            logger.info("End of program")
             break
 
 
