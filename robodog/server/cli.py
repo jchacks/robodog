@@ -8,7 +8,7 @@ def camera(ip, port):
     """Run camera."""
     from robodog.server import camera
 
-    camera.udp_stream(ip, port)
+    camera.stream(ip, port)
 
 
 if __name__ == "__main__":

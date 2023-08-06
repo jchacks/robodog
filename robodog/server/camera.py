@@ -25,8 +25,8 @@ def preview(timeout: int = 10):
     time.sleep(timeout)
 
 
-def udp_stream(ip: str, port: int, timeout: int = 100):
-    udp_address = f"udp://{ip}:{port}"
+def stream(ip: str, port: int, protocol="rtp", timeout: int = 100):
+    udp_address = f"{protocol}://{ip}:{port}"
     logger.info(f"Streaming to {udp_address}")
     picam2 = Picamera2()
     video_config = picam2.create_video_configuration()
@@ -41,4 +41,4 @@ def udp_stream(ip: str, port: int, timeout: int = 100):
 
 
 if __name__ == "__main__":
-    udp_stream()
+    preview()
