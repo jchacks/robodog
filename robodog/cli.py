@@ -9,3 +9,7 @@ from robodog import server
 def camera(ip, port):
     """Simple program that greets NAME for a total of COUNT times."""
     server.camera.udp_stream(ip, port)
+
+
+if __name__ == "__main__":
+    camera()
