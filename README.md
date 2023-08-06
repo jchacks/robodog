@@ -18,9 +18,14 @@ I havent figured out how to run everything without root yet.
 Adding to the kmem group didnt solve the problem.
 
 - `sudo .venv/bin/python -m robodog.server.led`
+- `sudo .venv/bin/python -m robodog.server.camera`
 
+When forwarding GUI components via X11 (ssh) the forwarding will fail because we are running as root.
+[This article from IBM](https://www.ibm.com/support/pages/x11-forwarding-ssh-connection-rejected-because-wrong-authentication) explains what is happening.
+You can see the error message when connecting with higher verbosity e.g. `ssh -v -X user@pi`.
 
 
 ## Documentation
 
 - https://www.ti.com/product/ADS7830 - Battery management?
+- [Camera](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf)
