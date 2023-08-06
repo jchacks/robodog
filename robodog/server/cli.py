@@ -12,4 +12,7 @@ def camera(ip, port):
 
 
 if __name__ == "__main__":
+    from robodog.server.config import configure_logging
+
+    configure_logging()
     camera()
