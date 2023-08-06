@@ -23,11 +23,10 @@ class ADS7830:
         return data
 
     def power(self, channel):
-        data = ["", "", "", "", "", "", "", "", ""]
-        for i in range(9):
-            data[i] = self.readAdc(channel)
+        data = [self.readAdc(channel) for _ in range(9)]
         data.sort()
-        battery_voltage = data[4] / 255.0 * 5.0 * 2
+        # I guess this is taking the median
+        battery_voltage = data[4] / 255.0 * 5.0 * 3
         return battery_voltage
 
 
@@ -36,7 +35,7 @@ def test():
     logger.info("Reading battery voltage:")
     try:
         while True:
-            power = adc.readAdc(0) / 255.0 * 5.0 * 2
+            power = adc.power(0)
             print(f"{power}V")
             time.sleep(0.5)
     except KeyboardInterrupt:
