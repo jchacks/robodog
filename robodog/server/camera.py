@@ -6,6 +6,9 @@ picam2 = Picamera2()
 camera_config = picam2.create_preview_configuration()
 picam2.configure(camera_config)
 
+config = picam2.create_preview_configuration()
+picam2.configure(config)
+
 # Use Preview.QTGL for local and Preiveiw.DRM for non XWindows envs
 picam2.start_preview(Preview.QT)
 picam2.start()
