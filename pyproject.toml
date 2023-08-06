@@ -1,0 +1,31 @@
+[project]
+requires-python = ">=3.9,<3.10"
+name = "robodog"
+version = "0.0.1"
+description = ""
+authors = [{ name = "Joshua Chacksfield", email = "chacksfieldj@gmail.com" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.1.2",
+    "black>=22.6.0",
+    "ruff>=0.0.265",
+    "pip-tools",
+]
+dog = ["rpi-ws281x==5.0.0", "mpu6050-raspberrypi==1.2"]
+
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+select = [
+    "I",  # isort
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "PL", # Pylint
+    "UP", # pyupgrade
+]
+ignore = ["PLR2004"]
+line-length = 120

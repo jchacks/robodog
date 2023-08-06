@@ -1,0 +1,19 @@
+# IDEs
+.idea/
+.vscode/
+
+# python
+build/
+dist/
+.venv/
+
+# data
+data/
+*.pkl
+
+# python
+__pycache__/
+*.egg-info/
+
+# sensitive
+*.env
