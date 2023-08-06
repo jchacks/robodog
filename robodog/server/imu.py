@@ -176,10 +176,14 @@ def test():
 
     imu = IMU()
     logger.info(f"Inital error accel={imu.accel_error}, gyro={imu.gyro_error}")
-    for i in range(10):
-        p, r, y = imu.update()
-        logger.info(f"IMU pitch={p} roll={r} yaw={y}")
-        time.sleep(0.01)
+    while True:
+        try:
+            p, r, y = imu.update()
+            logger.info(f"IMU pitch={p} roll={r} yaw={y}")
+            time.sleep(0.1)
+        except KeyboardInterrupt:
+            logger.info("End of program")
+            break
 
 
 if __name__ == "__main__":
