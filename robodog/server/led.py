@@ -184,7 +184,7 @@ def test(sleep=0.5):
 
 # Main program logic follows:
 if __name__ == "__main__":
-    from robodogpy.server.config import configure_logging
+    from robodog.server.config import configure_logging
 
     configure_logging()
     test()
