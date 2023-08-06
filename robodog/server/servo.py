@@ -93,11 +93,7 @@ class Servo:
         self.pwm.setPWM(channel, 0, int(data))
 
 
-if __name__ == "__main__":
-    from robodog.config import configure_logging
-
-    configure_logging()
-
+def test_90():
     logger.info("Now servos will rotate to 90°.")
     logger.info("If they have already been at 90°, nothing will be observed.")
     logger.info("Please keep the program running when installing the servos.")
@@ -110,3 +106,10 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             logger.info("\nEnd of program")
             break
+
+
+if __name__ == "__main__":
+    from robodog.config import configure_logging
+
+    configure_logging()
+    test_90()
