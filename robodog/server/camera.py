@@ -25,8 +25,12 @@ def preview(timeout: int = 10):
 def udp_stream(ip: str, port: int, timeout: int = 100):
     video_config = picam2.create_video_configuration()
     picam2.configure(video_config)
+
     encoder = H264Encoder(repeat=True, iperiod=15)
     encoder.output = FfmpegOutput(f"-f mpegts udp://{ip}:{port}")
+
+    picam2.start_encoder(encoder)
+    picam2.start()
     time.sleep(timeout)
 
 
