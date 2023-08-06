@@ -13,7 +13,7 @@ build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies]
 dev = ["pytest==7.1.2", "black>=22.6.0", "ruff>=0.0.265", "pip-tools"]
-dog = ["rpi-ws281x==5.0.0", "mpu6050-raspberrypi==1.2", "smbus"]
+dog = ["rpi-ws281x==5.0.0", "mpu6050-raspberrypi==1.2", "smbus", "picamera2"]
 
 
 [tool.black]

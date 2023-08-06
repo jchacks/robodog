@@ -33,10 +33,11 @@ class ADS7830:
 
 def test():
     adc = ADS7830()
+    logger.info("Reading battery voltage:")
     try:
         while True:
-            Power = adc.readAdc(0) / 255.0 * 5.0 * 2
-            logger.info("The battery voltage is " + str(Power) + "V")
+            power = adc.readAdc(0) / 255.0 * 5.0 * 2
+            print(f"{power}V")
             time.sleep(0.5)
     except KeyboardInterrupt:
         logger.info("End of program")
