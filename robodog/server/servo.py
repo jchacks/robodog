@@ -109,7 +109,7 @@ def test_90():
 
 
 if __name__ == "__main__":
-    from robodog.config import configure_logging
+    from robodog.server.config import configure_logging
 
     configure_logging()
     test_90()
