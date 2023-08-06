@@ -6,5 +6,5 @@
 - `apt upgrade`
 - `python3.9 -m venv .venv`
 - `source .venv/bin/activate`
-- `python -m pip install `
+- `pip install --upgrade pip`
 - `pip install ".[dog]"`

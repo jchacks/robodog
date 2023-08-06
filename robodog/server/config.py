@@ -1,6 +1,7 @@
 import logging
+from typing import Optional
 
-_LOGGER: logging.Logger | None = None
+_LOGGER: Optional[logging.Logger] = None
 LOGGING_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 
