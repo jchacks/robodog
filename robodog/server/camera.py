@@ -26,14 +26,14 @@ def preview(timeout: int = 10):
 
 
 def stream(ip: str, port: int, timeout: int = 100):
-    udp_address = f"rtp://{ip}:{port}"
+    udp_address = f"rtsp://{ip}:{port}"
     logger.info(f"Streaming to {udp_address}")
     picam2 = Picamera2()
     video_config = picam2.create_video_configuration()
     picam2.configure(video_config)
 
     encoder = H264Encoder(repeat=True, iperiod=15)
-    encoder.output = FfmpegOutput(f"-f rtp {udp_address}")
+    encoder.output = FfmpegOutput(f"-f rtsp {udp_address}")
 
     picam2.start_encoder(encoder)
     picam2.start()
