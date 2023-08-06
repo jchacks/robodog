@@ -4,6 +4,7 @@
 
 - `apt update`
 - `apt upgrade`
+- `apt install -y libcap-dev` - Was missing on my system
 - Optional: `sudo apt install -y python3-pyqt5 python3-opengl`
 - `python3.9 -m venv .venv`
 - `source .venv/bin/activate`
