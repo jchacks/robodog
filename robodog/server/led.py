@@ -3,7 +3,8 @@ import time
 
 from rpi_ws281x import Adafruit_NeoPixel, Color
 
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
+
 
 # LED strip configuration:
 LED_COUNT = 7  # Number of LED pixels.
